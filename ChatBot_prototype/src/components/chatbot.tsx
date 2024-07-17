@@ -8,11 +8,10 @@ interface Message {
 }
 
 const greetings = [
-  "введіть \"привіт\", щоб почати!",
-  "اكتب \"مرحبا\" للبدء!",
-  "escribe \"hola\" para empezar!",
-  " введите \"привет\", чтобы начать!"
-
+  'введіть "привіт", щоб почати!',
+  'اكتب "مرحبا" للبدء!',
+  'escribe "hola" para empezar!',
+  ' введите "привет", чтобы начать!',
 ];
 
 const Chatbot: React.FC = () => {
@@ -31,14 +30,14 @@ const Chatbot: React.FC = () => {
 
   useEffect(() => {
     if (initialMessage) {
-        let currentIndex = 0;
-        const interval = setInterval(() => {
-            currentIndex = (currentIndex + 1) % greetings.length;
-            setCurrentGreeting(greetings[currentIndex]);
-        }, 3000);
-        return () => clearInterval(interval);
+      let currentIndex = 0;
+      const interval = setInterval(() => {
+        currentIndex = (currentIndex + 1) % greetings.length;
+        setCurrentGreeting(greetings[currentIndex]);
+      }, 3000);
+      return () => clearInterval(interval);
     }
-}, [initialMessage]);
+  }, [initialMessage]);
 
   const sendMessage = async () => {
     if (input.trim() === "") return;
