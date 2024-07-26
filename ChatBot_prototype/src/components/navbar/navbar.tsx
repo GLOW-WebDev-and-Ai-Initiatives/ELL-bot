@@ -46,6 +46,7 @@ const Navbar: React.FC = () => {
         <a href="https://glowaction.org/about-us/" target="_blank">GLOW</a>
         <a href="#" target="_blank">Help</a>
         <a href="#" target="_blank">Feedback</a>
+        
       </div>
     </div>
   );
