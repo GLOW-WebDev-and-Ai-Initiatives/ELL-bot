@@ -42,7 +42,7 @@ const Navbar: React.FC = () => {
           </svg>
         )}
       </div>
-      <div className={`navbar-menu ${menu ? "open" : ""}`}>
+      <div className={`navbar-menu-${menu ? "open" : "closed"}`}>
         <a href="#">Home</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
