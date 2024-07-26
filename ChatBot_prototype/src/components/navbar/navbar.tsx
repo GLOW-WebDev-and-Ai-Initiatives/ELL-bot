@@ -15,8 +15,8 @@ const Navbar: React.FC = () => {
         {menu ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="35"
-            height="35"
+            width="24"
+            height="24"
             fill="currentColor"
             className="list"
             viewBox="0 0 16 16"
@@ -43,9 +43,9 @@ const Navbar: React.FC = () => {
         )}
       </div>
       <div className={`navbar-menu-${menu ? "open" : "closed"}`}>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+        <a href="https://glowaction.org/about-us/" target="_blank">GLOW</a>
+        <a href="#" target="_blank">About</a>
+        <a href="#" target="_blank">Feedback</a>
       </div>
     </div>
   );
