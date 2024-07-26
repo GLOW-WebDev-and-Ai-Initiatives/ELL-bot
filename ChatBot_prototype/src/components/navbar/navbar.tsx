@@ -44,7 +44,7 @@ const Navbar: React.FC = () => {
       </div>
       <div className={`navbar-menu-${menu ? "open" : "closed"}`}>
         <a href="https://glowaction.org/about-us/" target="_blank">GLOW</a>
-        <a href="#" target="_blank">About</a>
+        <a href="#" target="_blank">Help</a>
         <a href="#" target="_blank">Feedback</a>
       </div>
     </div>
