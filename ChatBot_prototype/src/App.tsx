@@ -5,7 +5,6 @@ import Navbar from "./components/navbar/navbar";
 const App: React.FC = () => {
   return (
     <div className="App">
-      <Navbar></Navbar>
       <Chatbot />
     </div>
   );

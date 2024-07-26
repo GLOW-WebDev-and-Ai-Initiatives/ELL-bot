@@ -1,3 +1,17 @@
-.hello {
-    font-size: x-large;
+.navbar{
+    position: -webkit-sticky;
+    max-width: 600px;
+    background-color: black;
+    margin: 0 auto;
+}
+.list{
+    color:white;
+    height: 35px;
+    width: 35px;
+
+}
+.list:hover{
+    color:gray;
+    background-color: none;
+    border-radius: none;
 }

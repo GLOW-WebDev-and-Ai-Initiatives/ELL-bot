@@ -136,13 +136,13 @@ button {
     cursor: pointer;
    
 }
-svg{
+.send{
     height: 35px;
     width: 35px;
     border-radius: 50%;
 
 }
-svg:hover{
+.send:hover{
     color:white;
     
     background-color: rgb(167, 167, 167);

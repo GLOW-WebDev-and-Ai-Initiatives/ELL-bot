@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
+import Navbar from "../navbar/navbar";
 import "./chatbot.css";
 
 interface Message {
@@ -66,53 +67,55 @@ const Chatbot: React.FC = () => {
     }
   };
 
-  // Automatically scroll to bottom when messages state changes
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
 
   return (
-    <div className="chatbot">
-      <div className="messages">
-        {initialMessage && (
-          <div className="initial-message">{currentGreeting}</div>
-        )}
-        {messages.map((message, index) => (
-          <div key={index} className={`message ${message.role}`}>
-            {message.content}
-          </div>
-        ))}
-        <div ref={messagesEndRef}></div> {/* This div helps with scrolling */}
-        {typingIndicator && (
-          <div className="typing-indicator">
-            <div className="dot"></div>
-            <div className="dot"></div>
-            <div className="dot"></div>
-          </div>
-        )}
-      </div>
-      <div className="input-container">
-        <input
-          type="text"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          onKeyPress={(e) => e.key === "Enter" && sendMessage()}
-        />
-        <button onClick={sendMessage}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            className="bi bi-arrow-up-circle"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"
-            />
-          </svg>
-        </button>
+    <div>
+      <Navbar />
+      <div className="chatbot">
+        <div className="messages">
+          {initialMessage && (
+            <div className="initial-message">{currentGreeting}</div>
+          )}
+          {messages.map((message, index) => (
+            <div key={index} className={`message ${message.role}`}>
+              {message.content}
+            </div>
+          ))}
+          <div ref={messagesEndRef}></div>
+          {typingIndicator && (
+            <div className="typing-indicator">
+              <div className="dot"></div>
+              <div className="dot"></div>
+              <div className="dot"></div>
+            </div>
+          )}
+        </div>
+        <div className="input-container">
+          <input
+            type="text"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyPress={(e) => e.key === "Enter" && sendMessage()}
+          />
+          <button onClick={sendMessage}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              className="send"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
   );
