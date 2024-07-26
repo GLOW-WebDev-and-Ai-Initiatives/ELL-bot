@@ -15,10 +15,10 @@ const Navbar: React.FC = () => {
         {menu ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
+            width="20"
+            height="20"
             fill="currentColor"
-            className="list"
+            className="x"
             viewBox="0 0 16 16"
           >
             <path
@@ -29,8 +29,8 @@ const Navbar: React.FC = () => {
         ) : (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
+            width="20"
+            height="20"
             fill="currentColor"
             className="list"
             viewBox="0 0 16 16"
