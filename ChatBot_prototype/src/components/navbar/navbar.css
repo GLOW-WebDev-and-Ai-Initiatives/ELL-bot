@@ -51,6 +51,17 @@
     padding: 2rem;
     
 }
+
+.feedback{
+  height: 25px;
+  width: 25px;
+  padding: 0 15px;
+  fill: lightgray;
+}
+.feedback:hover{
+  fill: rgb(147, 147, 147);
+}
+
 .navbar-menu-open a{
     position: relative;
 padding:0 15px;
