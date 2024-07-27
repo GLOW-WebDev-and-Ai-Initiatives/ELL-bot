@@ -1,9 +1,4 @@
 .env
-<<<<<<< HEAD
 __pycache__
 .venv
-=======
 app/__pycache__
-__pycache__
-
->>>>>>> main
