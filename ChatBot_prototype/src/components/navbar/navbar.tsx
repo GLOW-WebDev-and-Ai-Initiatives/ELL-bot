@@ -43,10 +43,22 @@ const Navbar: React.FC = () => {
         )}
       </div>
       <div className={`navbar-menu-${menu ? "open" : "closed"}`}>
+<<<<<<< HEAD
         <a href="https://glowaction.org/about-us/" target="_blank">GLOW</a>
         <a href="#" target="_blank">Help</a>
         <a href="#" target="_blank">Feedback</a>
         
+=======
+        <a href="https://glowaction.org/about-us/" target="_blank">
+          GLOW
+        </a>
+        <a href="#" target="_blank">
+          About
+        </a>
+        <a href="https://forms.gle/uD49hHnh6PqjjHj1A" target="_blank">
+          Feedback
+        </a>
+>>>>>>> 5b281cdb3614547425f5a304d4053044173dc286
       </div>
     </div>
   );
