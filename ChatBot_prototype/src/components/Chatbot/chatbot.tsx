@@ -51,9 +51,12 @@ const Chatbot: React.FC = () => {
     try {
       console.log(newMessages);
       const messages = newMessages;
-      const response = await axios.post("glowfastapi.azurewebsites.net/chat/", {
-        messages,
-      });
+      const response = await axios.post(
+        "https://glowfastapi.azurewebsites.net/chat/",
+        {
+          messages,
+        }
+      );
 
       console.log("Response from API:", response.data);
       setMessages([
