@@ -51,7 +51,7 @@ const Chatbot: React.FC = () => {
     try {
       console.log(newMessages);
       const messages = newMessages;
-      const response = await axios.post("http://localhost:8000/chat/", {
+      const response = await axios.post("glowfastapi.azurewebsites.net/chat/", {
         messages,
       });
 
