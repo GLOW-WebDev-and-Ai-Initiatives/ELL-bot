@@ -76,7 +76,7 @@
 /* Wrapper for item list */
 .bm-item-list {
   color: #b8b7ad;
-  padding: 0.8em;
+  padding: .8em;
   max-height: 93%;
 }
 
@@ -91,6 +91,8 @@
 a{
   display: flex;
   flex-direction: column;
+  padding:8px 0px ;
+
 }
 
 a:hover{
@@ -98,6 +100,7 @@ a:hover{
 }
 svg.h{
   height:1.3em;
+ 
   padding-right: 15px;
   fill: #FC466B;
 
