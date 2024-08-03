@@ -15,7 +15,6 @@ export default () => {
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-   
           className="h"
           viewBox="0 0 16 16"
         >
@@ -38,7 +37,10 @@ export default () => {
         </svg>
         Feedback
       </a>
-      <a href="">
+      <a
+        href="https://www.instagram.com/glowaction?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        target="_blank"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h"
