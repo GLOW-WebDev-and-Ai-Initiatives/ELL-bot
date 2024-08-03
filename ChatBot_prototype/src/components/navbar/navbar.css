@@ -22,13 +22,13 @@
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #757a91;
+  background: rgb(242,164,139);
 }
 
 
 /* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
-  background: #6609b8;
+  background: rgb(252, 139, 102);
 }
 
 
@@ -45,7 +45,7 @@
 
 /* Color/shape of close button cross */
 .bm-cross {
-  background: #c7bdbd;
+  background: white;
 }
 
 /*Sidebar wrapper styles*/
@@ -57,7 +57,7 @@
 
 /* General sidebar styles */
 .bm-menu {
-  background: #ffffff;
+  background: rgb(160,198,181);
   padding: 2em 1.5em 0;
   font-size: 1.3em;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -92,23 +92,19 @@ a{
 
 }
 
-a:hover{
 
-}
 svg.h{
   height:1.3em;
  
   padding-right: 15px;
-  fill: #FC466B;
+  fill: white;
 
 }
-svg.h:hover{
-  fill: #d43958;
-}
+
 
 /* Styling of overlay */
 .bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
+
 }
 
 /* Individual item */
@@ -122,16 +118,13 @@ svg.h:hover{
   transition: color 0.2s;
   font-style: Bradley Hand;
 
-  background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  color: white;
 }
 
 
 .bm-item:hover {
-  background: linear-gradient(90deg, #c33551 0%, #293fb0 100%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  color: #d1d1d1;
+  fill: #d1d1d1;
 }
 
 

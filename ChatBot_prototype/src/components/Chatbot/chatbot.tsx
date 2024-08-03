@@ -77,7 +77,9 @@ const Chatbot: React.FC = () => {
       <div className="chatbot">
         <div className="messages">
           {initialMessage && (
-            <div className="initial-message">{currentGreeting}</div>
+            <div className="initial-message">
+              <div className="image"><img src="../src/assets/logo.jpeg" alt="kj,k" /></div>
+              {currentGreeting}</div>
           )}
           {messages.map((message, index) => (
             <div key={index} className={`message ${message.role}`}>
