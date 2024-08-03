@@ -123,8 +123,12 @@ svg.h{
 
 
 .bm-item:hover {
-  color: #d1d1d1;
-  fill: #d1d1d1;
+  color:  #e4e4e4;
+  
+}
+
+.bm-item:hover svg.h {
+  fill: #e4e4e4;
 }
 
 
