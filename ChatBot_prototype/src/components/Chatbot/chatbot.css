@@ -25,10 +25,10 @@
 }
 
 .initial-message{
-
+    display: flex;
+    flex-direction: column;
     padding: 010px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    
     max-width: 80%;
     word-wrap: break-word;
     text-align: center;
@@ -41,10 +41,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+    color: rgb(245,192,106);;
     animation: fadeIn 3s ease-in-out infinite;
+}
+
+img {
+    height: 148px;
 }
 
 @keyframes fadeIn {
@@ -87,7 +89,7 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     align-self: flex-start;
     background-color: white;
-    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+    background: linear-gradient(90deg, rgb(246, 179, 72) 0%, rgb(252, 139, 102) 100%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
@@ -100,29 +102,27 @@
 }
 
 input {
-    font-size: large;
+    font-size: medium;
     flex: 1;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding-left: 25px;
     padding-right: 25px;
-    border: 2px solid rgb(194, 191, 191);
+    border: 2px solid rgb(169,169,169);
     border-radius: 25px;
-    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+    color: rgb(119, 198, 162);
     max-height: 100%;
-    max-width: 80%;
+    max-width: 90%;
 }
 input:focus {
     outline: none;
-    border-color:rgb(167, 167, 167); /* Example color change on focus */
+    border-color:rgb(157, 157, 157); /* Example color change on focus */
     box-shadow: none; /* Example box shadow */
 
 }
 
 input:hover {
     outline: none;
-    border-color:rgb(167, 167, 167); /* Example color change on focus */
+    border-color:rgb(157, 157, 157); /* Example color change on focus */
     box-shadow: none; /* Example box shadow */
 
 }
@@ -136,22 +136,23 @@ button {
     margin-left: 10px;
     border: none;
     background-color: white;
-    color: rgb(191, 191, 191);
+    color: white;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-radius: 25px;
+    border-radius: 50%;
     cursor: pointer;
    
 }
 .send{
+    fill: rgb(245,192,106);
     height: 35px;
     width: 35px;
-    border-radius: 50%;
+
 
 }
 .send:hover{
-    color:white;
+ 
     
-    background-color: rgb(167, 167, 167);
+   fill: rgb(246, 179, 72);
     border-radius: 50%;
 }
 
@@ -160,7 +161,7 @@ button {
     height: 7px;
     width: 7px;
     margin: 0 4px;
-    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+    background: linear-gradient(90deg, rgb(246, 179, 72) 0%, rgb(252, 139, 102) 100%);
     border-radius: 50%;
     display: inline-block;
     animation: bounce 1s infinite;
