@@ -82,7 +82,7 @@ const Chatbot: React.FC = () => {
           {initialMessage && (
             <div className="initial-message">
               <div className="image">
-                <img src="../src/assets/logo.png" alt="sol" />
+                <img src="/logo.png" alt="sol" />
               </div>
               {currentGreeting}
             </div>
