@@ -13,7 +13,7 @@ const Modal = ({ isVisible, onClose, content }) => {
         <span className="close" onClick={onClose}>
           &times;
         </span>
-        <p>{content}</p>
+        Outlandish things
       </div>
     </div>
   );
