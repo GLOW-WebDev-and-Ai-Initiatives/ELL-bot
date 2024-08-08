@@ -147,6 +147,8 @@ svg.h{
   border: 1px solid #888;
   width: 80%;
   max-width: 500px;
+  max-height: 500px;
+  overflow-y: auto;
 }
 
 .close {
@@ -154,6 +156,7 @@ svg.h{
   float: right;
   font-size: 28px;
   font-weight: bold;
+  position: sticky;
 }
 
 .close:hover,

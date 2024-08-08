@@ -13,7 +13,86 @@ const Modal = ({ isVisible, onClose, content }) => {
         <span className="close" onClick={onClose}>
           &times;
         </span>
-        Outlandish things
+        <p>
+          {" "}
+          Our Mission: The mission of our ELL Bot is to lend a helping hand to
+          refugees in need of understanding the culture and environment of the
+          US. Our team hopes to drive positive change and empower refugees to
+          rebuild their lives in the US by helping them through language and
+          cultural barriers.{" "}
+        </p>
+        <p>
+          Spanish: Nuestra misión: La misión de nuestro ELL Bot es ayudar a los
+          refugiados que necesitan comprender la cultura y el medio ambiente de
+          los EE. UU. Nuestro equipo espera impulsar un cambio positivo y
+          empoderar a los refugiados para que reconstruyan sus vidas en los EE.
+          UU. ayudándolos a superar las barreras lingüísticas y culturales.{" "}
+        </p>
+        <p>
+          {" "}
+          Ukrainian: Наша місія: Місія нашого ELL Bot полягає в тому, щоб
+          простягнути руку допомоги біженцям, які потребують розуміння культури
+          та середовища США. Наша команда сподівається сприяти позитивним змінам
+          і дати біженцям можливість відновити своє життя в США, допомагаючи їм
+          подолати мовні та культурні бар’єри.
+        </p>
+        <p>
+          Russian: Наша миссия: Миссия нашего бота ELL — протянуть руку помощи
+          беженцам, нуждающимся в понимании культуры и окружающей среды США.
+          Наша команда надеется добиться позитивных изменений и дать беженцам
+          возможность восстановить свою жизнь в США, помогая им преодолеть
+          языковые и культурные барьеры.{" "}
+        </p>
+        <p>
+          Arabic: مھمتنا: تتمثل مھمة ELL Bot لدینا في تقدیم ید العون للاجئین
+          المحتاجین إلى فھم ثقافة وبیئة الولایات المتحدة. ویأمل فریقنا في إحداث
+          تغییر إیجابي وتمكین اللاجئین من إعادة بناء حیاتھم في الولایات المتحدة
+          من خلال مساعدتھم في التغلب على الحواجز اللغویة والثقافیة.{" "}
+        </p>
+        <p> Languages we Support: Spanish, Ukrainian, Russian, and Arabic.</p>
+        <p>Spanish: Idiomas que admitimos: español, ucraniano, ruso y árabe.</p>
+        <p>
+          Ukrainian: Мови, які ми підтримуємо: іспанська, українська, російська
+          та арабська.
+        </p>
+        <p>
+          Russian: Языки, которые мы поддерживаем: испанский, украинский,
+          русский и арабский.
+        </p>
+        <p>
+          Arabic: اللغات التي ندعمھا: الإسبانیة والأوكرانیة والروسیة والعربیة.
+        </p>
+        <p>
+          Need Help? Type in any question or prompt to the bot in Spanish,
+          Ukrainian, Russian, or Arabic, and it will answer you in the language
+          that you have typed in. You can also give us feedback on the
+          “FEEDBACK” page.
+        </p>
+        ￼
+        <p>
+          Spanish: ¿Necesitas ayuda? Escribe cualquier pregunta o mensaje al bot
+          en español, ucraniano, ruso o árabe, y te responderá en el idioma que
+          hayas escrito. También puedes darnos tu opinión en la página
+          "FEEDBACK".
+        </p>
+        <p>
+          {" "}
+          Ukrainian: Потрібна допомога? Введіть будь-яке запитання чи підказку
+          боту іспанською, українською, російською чи арабською, і він
+          відповість вам мовою, яку ви ввели. Ви також можете надіслати нам
+          відгук на сторінці «FEEDBACK».
+        </p>
+        <p>
+          Russian: Нужна помощь? Введите любой вопрос или подсказку боту на
+          испанском, украинском, русском или арабском языке, и он ответит вам на
+          том языке, который вы ввели. Вы также можете оставить нам отзыв на
+          странице «FEEDBACK».
+        </p>
+        <p>
+          Arabic: تحتاج مساعدة؟ اكتب أي سؤال أو أرسلھ إلى الروبوت باللغة
+          الإسبانیة أو الأوكرانیة أو الروسیة أو العربیة، وسوف یجیب علیك باللغة
+          التي كتبتھا. یمكنك أی ًضا تقدیم تعلیقات لنا على صفحة "FEEDBACK".
+        </p>
       </div>
     </div>
   );
@@ -34,19 +113,19 @@ export default () => {
 
   useEffect(() => {
     if (isSideNoteVisible) {
-      fetch('about.txt')
-        .then(response => response.text())
-        .then(text => setAboutContent(text))
-        .catch(error => console.error('Error fetching about.txt:', error));
+      fetch("about.txt")
+        .then((response) => response.text())
+        .then((text) => setAboutContent(text))
+        .catch((error) => console.error("Error fetching about.txt:", error));
     }
   }, [isSideNoteVisible]);
 
   useEffect(() => {
     if (isModalVisible) {
-      fetch('/Users/utkarshbanka/ELL-bot/ChatBot_prototype/src/components/navbar/about.txt')
-        .then(response => response.text())
-        .then(text => setAboutContent(text))
-        .catch(error => console.error('Error fetching about.txt:', error));
+      fetch("/src/components/navbar/about.txt")
+        .then((response) => response.text())
+        .then((text) => setAboutContent(text))
+        .catch((error) => console.error("Error fetching about.txt:", error));
     }
   }, [isModalVisible]);
 
@@ -81,34 +160,13 @@ export default () => {
         </svg>
         Feedback
       </a>
-      <a
-        className="menu-item"
-        onClick={toggleModal}
-      >
+      <a className="menu-item" onClick={toggleModal}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
           className="h"
+          viewBox="0 0 16 16"
         >
-          <path d="
-            m50,0
-            a50,50,0,0,0,0,100
-            a-50,-50,0,0,0,0,-100
-            z
-            m-8,32
-            a8,8,0,0,1,-16,0
-            a8,8,0,0,1,16,0
-            z
-            m32,0
-            a8,8,0,0,1,-16,0
-            a8,8,0,0,1,16,0
-            z
-            m-54,30
-            h60
-            c-5,26,-55,26,-60,0
-            z
-          " />
+          <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2" />
         </svg>
         About
       </a>
@@ -118,9 +176,7 @@ export default () => {
         content={aboutContent || "Loading..."}
       />
       {isSideNoteVisible && (
-        <div className="side-note">
-          {aboutContent || "Loading..."}
-        </div>
+        <div className="side-note">{aboutContent || "Loading..."}</div>
       )}
     </Menu>
   );
