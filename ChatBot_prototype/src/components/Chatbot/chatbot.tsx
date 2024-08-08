@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import Navbar from "../navbar/navbar";
 import "./chatbot.css";
-
+import ReactMarkdown from "react-markdown";
 interface Message {
   role: string;
   content: string;
@@ -77,11 +77,16 @@ const Chatbot: React.FC = () => {
       <div className="chatbot">
         <div className="messages">
           {initialMessage && (
-            <div className="initial-message">{currentGreeting}</div>
+            <div className="initial-message">
+              <div className="image">
+                <img src="../src/assets/logo.png" alt="kj,k" />
+              </div>
+              {currentGreeting}
+            </div>
           )}
           {messages.map((message, index) => (
             <div key={index} className={`message ${message.role}`}>
-              {message.content}
+              <ReactMarkdown>{message.content}</ReactMarkdown>
             </div>
           ))}
           <div ref={messagesEndRef}></div>
@@ -103,16 +108,11 @@ const Chatbot: React.FC = () => {
           <button onClick={sendMessage}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
+              id="arrow-circle-down"
+              viewBox="0 0 24 24"
               className="send"
-              viewBox="0 0 16 16"
             >
-              <path
-                fill-rule="evenodd"
-                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"
-              />
+              <path d="M12,24A12,12,0,1,0,0,12,12.013,12.013,0,0,0,12,24ZM10.586,6.586a2,2,0,0,1,2.828,0l4.243,4.243-1.414,1.414L13,9v9H11V9L7.757,12.243,6.343,10.829Z" />
             </svg>
           </button>
         </div>
