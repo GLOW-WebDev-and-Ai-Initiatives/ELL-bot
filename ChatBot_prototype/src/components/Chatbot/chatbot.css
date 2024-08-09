@@ -38,7 +38,7 @@
     word-wrap: break-word;
     text-align: center;
     font-weight: bold;
-    font-size: xx-large;
+    font-size: x-large;
     position: absolute; /* Absolute positioning to center it properly */
     top: 50%;
     left: 50%;
@@ -147,10 +147,6 @@ input:hover {
     outline: none;
     border-color:rgb(157, 157, 157); /* Example color change on focus */
     box-shadow: none; /* Example box shadow */
-
-}
-
-.typing-indicator{
 
 }
 
