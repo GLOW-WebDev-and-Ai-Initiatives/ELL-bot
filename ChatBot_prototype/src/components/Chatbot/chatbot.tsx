@@ -77,11 +77,11 @@ const Chatbot: React.FC = () => {
       <div className="chatbot">
         <div className="messages">
           {initialMessage && (
-            <div className="initial-message">
+            <div>
               <div className="image">
                 <img src="../src/assets/logo.png" alt="kj,k" />
               </div>
-              {currentGreeting}
+              <div className="initial-message">{currentGreeting}</div>
             </div>
           )}
           {messages.map((message, index) => (
