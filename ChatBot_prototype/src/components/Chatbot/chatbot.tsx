@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import Navbar from "../navbar/navbar";
 import "./chatbot.css";
-
+import ReactMarkdown from "react-markdown";
 interface Message {
   role: string;
   content: string;
@@ -77,16 +77,16 @@ const Chatbot: React.FC = () => {
       <div className="chatbot">
         <div className="messages">
           {initialMessage && (
-            <div className="initial-message">
+            <div>
               <div className="image">
                 <img src="../src/assets/logo.png" alt="kj,k" />
               </div>
-              {currentGreeting}
+              <div className="initial-message">{currentGreeting}</div>
             </div>
           )}
           {messages.map((message, index) => (
             <div key={index} className={`message ${message.role}`}>
-              {message.content}
+              <ReactMarkdown>{message.content}</ReactMarkdown>
             </div>
           ))}
           <div ref={messagesEndRef}></div>
