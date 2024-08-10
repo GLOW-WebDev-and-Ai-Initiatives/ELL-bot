@@ -105,31 +105,31 @@ const Modal: React.FC<ModalProps> = ({ isVisible, onClose }) => {
 };
 
 export default () => {
-  const [isSideNoteVisible] = useState(false);
-  const [aboutContent, setAboutContent] = useState("");
-  const [isModalVisible, setModalVisible] = useState(false);
+  // const [isSideNoteVisible] = useState(false);
+  // const [aboutContent, setAboutContent] = useState("");
+  // const [isModalVisible, setModalVisible] = useState(false);
 
-  const toggleModal = () => {
-    setModalVisible(!isModalVisible);
-  };
+  // const toggleModal = () => {
+  //   setModalVisible(!isModalVisible);
+  // };
 
-  useEffect(() => {
-    if (isSideNoteVisible) {
-      fetch("about.txt")
-        .then((response) => response.text())
-        .then((text) => setAboutContent(text))
-        .catch((error) => console.error("Error fetching about.txt:", error));
-    }
-  }, [isSideNoteVisible]);
+  // useEffect(() => {
+  //   if (isSideNoteVisible) {
+  //     fetch("about.txt")
+  //       .then((response) => response.text())
+  //       .then((text) => setAboutContent(text))
+  //       .catch((error) => console.error("Error fetching about.txt:", error));
+  //   }
+  // }, [isSideNoteVisible]);
 
-  useEffect(() => {
-    if (isModalVisible) {
-      fetch("/src/components/navbar/about.txt")
-        .then((response) => response.text())
-        .then((text) => setAboutContent(text))
-        .catch((error) => console.error("Error fetching about.txt:", error));
-    }
-  }, [isModalVisible]);
+  // useEffect(() => {
+  //   if (isModalVisible) {
+  //     fetch("/src/components/navbar/about.txt")
+  //       .then((response) => response.text())
+  //       .then((text) => setAboutContent(text))
+  //       .catch((error) => console.error("Error fetching about.txt:", error));
+  //   }
+  // }, [isModalVisible]);
 
   return (
     <Menu>
