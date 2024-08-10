@@ -4,7 +4,13 @@ import { useState, useEffect } from "react";
 import React from "react";
 import { slide as Menu } from "react-burger-menu";
 
-const Modal = ({ isVisible, onClose, content }) => {
+type ModalProps = {
+  isVisible: boolean;
+  onClose: () => void;
+  content: React.ReactNode;
+};
+
+const Modal: React.FC<ModalProps> = ({ isVisible, onClose }) => {
   if (!isVisible) return null;
 
   return (
@@ -99,13 +105,9 @@ const Modal = ({ isVisible, onClose, content }) => {
 };
 
 export default () => {
-  const [isSideNoteVisible, setSideNoteVisible] = useState(false);
+  const [isSideNoteVisible] = useState(false);
   const [aboutContent, setAboutContent] = useState("");
   const [isModalVisible, setModalVisible] = useState(false);
-
-  const toggleSideNote = () => {
-    setSideNoteVisible(!isSideNoteVisible);
-  };
 
   const toggleModal = () => {
     setModalVisible(!isModalVisible);
