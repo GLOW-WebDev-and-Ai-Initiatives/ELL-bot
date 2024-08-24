@@ -45,14 +45,6 @@ export default () => {
         </svg>
         T.O.S.
       </a> */}
-      <Modal
-        isVisible={isModalVisible}
-        onClose={toggleModal}
-        content={aboutContent || "Loading..."}
-      />
-      {isSideNoteVisible && (
-        <div className="side-note">{aboutContent || "Loading..."}</div>
-      )} */}
       <a
         className="menu-item"
         href="https://www.instagram.com/glowaction?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
