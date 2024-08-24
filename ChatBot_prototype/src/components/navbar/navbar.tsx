@@ -1,136 +1,8 @@
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./navbar.css";
-import { useState, useEffect } from "react";
-import React from "react";
 import { slide as Menu } from "react-burger-menu";
 
-type ModalProps = {
-  isVisible: boolean;
-  onClose: () => void;
-  content: React.ReactNode;
-};
-
-const Modal: React.FC<ModalProps> = ({ isVisible, onClose }) => {
-  if (!isVisible) return null;
-
-  return (
-    <div className="modal">
-      <div className="modal-content">
-        <span className="close" onClick={onClose}>
-          &times;
-        </span>
-        <p>
-          {" "}
-          Our Mission: The mission of our ELL Bot is to lend a helping hand to
-          refugees in need of understanding the culture and environment of the
-          US. Our team hopes to drive positive change and empower refugees to
-          rebuild their lives in the US by helping them through language and
-          cultural barriers.{" "}
-        </p>
-        <p>
-          Spanish: Nuestra misión: La misión de nuestro ELL Bot es ayudar a los
-          refugiados que necesitan comprender la cultura y el medio ambiente de
-          los EE. UU. Nuestro equipo espera impulsar un cambio positivo y
-          empoderar a los refugiados para que reconstruyan sus vidas en los EE.
-          UU. ayudándolos a superar las barreras lingüísticas y culturales.{" "}
-        </p>
-        <p>
-          {" "}
-          Ukrainian: Наша місія: Місія нашого ELL Bot полягає в тому, щоб
-          простягнути руку допомоги біженцям, які потребують розуміння культури
-          та середовища США. Наша команда сподівається сприяти позитивним змінам
-          і дати біженцям можливість відновити своє життя в США, допомагаючи їм
-          подолати мовні та культурні бар’єри.
-        </p>
-        <p>
-          Russian: Наша миссия: Миссия нашего бота ELL — протянуть руку помощи
-          беженцам, нуждающимся в понимании культуры и окружающей среды США.
-          Наша команда надеется добиться позитивных изменений и дать беженцам
-          возможность восстановить свою жизнь в США, помогая им преодолеть
-          языковые и культурные барьеры.{" "}
-        </p>
-        <p>
-          Arabic: مھمتنا: تتمثل مھمة ELL Bot لدینا في تقدیم ید العون للاجئین
-          المحتاجین إلى فھم ثقافة وبیئة الولایات المتحدة. ویأمل فریقنا في إحداث
-          تغییر إیجابي وتمكین اللاجئین من إعادة بناء حیاتھم في الولایات المتحدة
-          من خلال مساعدتھم في التغلب على الحواجز اللغویة والثقافیة.{" "}
-        </p>
-        <p> Languages we Support: Spanish, Ukrainian, Russian, and Arabic.</p>
-        <p>Spanish: Idiomas que admitimos: español, ucraniano, ruso y árabe.</p>
-        <p>
-          Ukrainian: Мови, які ми підтримуємо: іспанська, українська, російська
-          та арабська.
-        </p>
-        <p>
-          Russian: Языки, которые мы поддерживаем: испанский, украинский,
-          русский и арабский.
-        </p>
-        <p>
-          Arabic: اللغات التي ندعمھا: الإسبانیة والأوكرانیة والروسیة والعربیة.
-        </p>
-        <p>
-          Need Help? Type in any question or prompt to the bot in Spanish,
-          Ukrainian, Russian, or Arabic, and it will answer you in the language
-          that you have typed in. You can also give us feedback on the
-          “FEEDBACK” page.
-        </p>
-        ￼
-        <p>
-          Spanish: ¿Necesitas ayuda? Escribe cualquier pregunta o mensaje al bot
-          en español, ucraniano, ruso o árabe, y te responderá en el idioma que
-          hayas escrito. También puedes darnos tu opinión en la página
-          "FEEDBACK".
-        </p>
-        <p>
-          {" "}
-          Ukrainian: Потрібна допомога? Введіть будь-яке запитання чи підказку
-          боту іспанською, українською, російською чи арабською, і він
-          відповість вам мовою, яку ви ввели. Ви також можете надіслати нам
-          відгук на сторінці «FEEDBACK».
-        </p>
-        <p>
-          Russian: Нужна помощь? Введите любой вопрос или подсказку боту на
-          испанском, украинском, русском или арабском языке, и он ответит вам на
-          том языке, который вы ввели. Вы также можете оставить нам отзыв на
-          странице «FEEDBACK».
-        </p>
-        <p>
-          Arabic: تحتاج مساعدة؟ اكتب أي سؤال أو أرسلھ إلى الروبوت باللغة
-          الإسبانیة أو الأوكرانیة أو الروسیة أو العربیة، وسوف یجیب علیك باللغة
-          التي كتبتھا. یمكنك أی ًضا تقدیم تعلیقات لنا على صفحة "FEEDBACK".
-        </p>
-      </div>
-    </div>
-  );
-};
-
 export default () => {
-  const [isSideNoteVisible] = useState(false);
-  const [aboutContent, setAboutContent] = useState("");
-  const [isModalVisible, setModalVisible] = useState(false);
-
-  const toggleModal = () => {
-    setModalVisible(!isModalVisible);
-  };
-
-  useEffect(() => {
-    if (isSideNoteVisible) {
-      fetch("about.txt")
-        .then((response) => response.text())
-        .then((text) => setAboutContent(text))
-        .catch((error) => console.error("Error fetching about.txt:", error));
-    }
-  }, [isSideNoteVisible]);
-
-  useEffect(() => {
-    if (isModalVisible) {
-      fetch("/src/components/navbar/about.txt")
-        .then((response) => response.text())
-        .then((text) => setAboutContent(text))
-        .catch((error) => console.error("Error fetching about.txt:", error));
-    }
-  }, [isModalVisible]);
-
   return (
     <Menu>
       <a
@@ -162,7 +34,7 @@ export default () => {
         </svg>
         Feedback
       </a>
-      <a className="menu-item" onClick={toggleModal}>
+      {/* <a className="menu-item" onClick={toggleModal}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h"
@@ -180,7 +52,21 @@ export default () => {
       />
       {isSideNoteVisible && (
         <div className="side-note">{aboutContent || "Loading..."}</div>
-      )}
+      )} */}
+      <a
+        className="menu-item"
+        href="https://www.instagram.com/glowaction?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        target="_blank"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h"
+          viewBox="0 0 16 16"
+        >
+          <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+        </svg>
+        Socials
+      </a>
     </Menu>
   );
 };
